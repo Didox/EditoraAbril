@@ -1,7 +1,14 @@
-# Editora Abril
+# Test Code, Editora Abril
 
-###### Desenvolvido por [Guilherme Vinicius](http://guilhermevini.com)  
+Devido ao curto prazo, não consegui fazer os acabamentos que pretendia e algumas melhorias, principalmente na parte de responsividade. No entando, acredito que a ideia foi passada.
+###### Att, [Guilherme Vinicius](http://guilhermevini.com)  
 ___
+** Tecnologias utilizadas:** npm, bower, grunt, sass, css3, html5, js, jquery, php, slim framework, composer, eloquent orm, mysql, git, angularjs, bootstrap e yeoman.  
+
+** Instalação e Teste: ** Em cada pasta de projeto existe um arquivo readme.md com pequenas instruções.
+___
+
+** Previews & Screenshots **
 
 *Teste-1 Crud - Preview*  
 [http://abril.guilhermevini.com/app/](http://abril.guilhermevini.com/app/)
