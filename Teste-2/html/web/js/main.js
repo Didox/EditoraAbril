@@ -14,11 +14,18 @@ function stickIt() {
         $('.cloned').hide();
         $('.original').css('visibility', 'visible');
     }
-    
+
 }
 
 $(function() {
 
+    // Cria Mobile Menu
+    $('nav.pri').clone().removeClass('pri').attr('id', 'nav-mobile').insertBefore('header');
+    $('nav#nav-mobile .dropdown').remove();
+    $('img.logo').clone().insertBefore('#nav-trigger span.lupa');
+    $('#busca').clone().attr('id', 'busca-mobile').insertAfter('#nav-mobile');
+
+    //Cria float Menu
     $('header')
         .addClass('original')
         .clone()
@@ -32,4 +39,40 @@ $(function() {
         .hide();
 
     scrollIntervalID = setInterval(stickIt, 10);
+
+    function hideMenu(element) {
+        $('nav#nav-mobile ul.expanded').removeClass('expanded').slideUp(250);
+        $(element).removeClass("open");
+    }
+
+    function hideBusca(element) {
+        $('#busca-mobile.expanded').removeClass('expanded').slideUp(250);
+        $(element).removeClass("open");
+    }
+
+    $('#nav-trigger span.menu').click(function() {
+        if ($('#busca-mobile').hasClass('expanded')) {
+            hideBusca('#nav-trigger span.lupa');
+        }
+        if ($('nav#nav-mobile ul').hasClass('expanded')) {
+            hideMenu(this);
+        } else {
+            $("nav#nav-mobile ul").addClass("expanded").slideDown(250);
+            $(this).addClass("open");
+        }
+    });
+
+    $('#nav-trigger span.lupa').click(function() {
+        if ($('nav#nav-mobile ul').hasClass('expanded')) {
+            hideMenu('#nav-trigger span.menu');
+        }
+
+        if ($('#busca-mobile').hasClass('expanded')) {
+            hideBusca(this);
+        } else {
+            $("#busca-mobile").addClass("expanded").slideDown(250);
+            $(this).addClass("open");
+        }
+    });
+
 });
