@@ -13,7 +13,7 @@ $app = new \Slim\Slim();
 $app->add(new \CorsSlim\CorsSlim());
 
 $app->get('/', function () use ($app) {
-    $app->redirect('/app/');
+    $app->redirect('./app/');
 });
 
 $app->get('/clientes', 'ClienteController:getClientes');
