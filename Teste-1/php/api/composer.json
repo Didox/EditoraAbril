@@ -1,0 +1,9 @@
+{
+    "name": "slim/slim-skeleton",
+    "require": {
+        "php": ">=5.3.0",
+        "slim/slim": "2.*",
+        "illuminate/database": "^5.0",
+        "palanik/corsslim": "*"
+    }
+}

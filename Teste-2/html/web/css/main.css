@@ -1,0 +1,150 @@
+body {
+  background-color: #e6e6e6;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 400;
+  height: 5000px; }
+
+a {
+  text-decoration: none; }
+
+img {
+  vertical-align: middle; }
+
+li,
+ul {
+  margin: 0;
+  padding: 0; }
+
+b,
+strong {
+  font-weight: 700; }
+
+.adv {
+  max-width: 728px;
+  margin: 12px auto; }
+  .adv img {
+    width: 100%;
+    height: auto; }
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto; }
+
+header {
+  position: relative;
+  background-color: #ed1c24;
+  padding: 0 20px;
+  clear: both;
+  height: 80px; }
+  header .social {
+    float: left;
+    display: none;
+    line-height: 60px; }
+    header .social ul li {
+      list-style: none;
+      display: inline-block; }
+  header.cloned {
+    height: 60px; }
+    header.cloned .sec {
+      display: none; }
+    header.cloned .social {
+      display: inline-block; }
+    header.cloned nav.pri {
+      line-height: 60px; }
+      header.cloned nav.pri ul li .drop {
+        background: url("../img/setinha-down.png") no-repeat right 26px; }
+    header.cloned img.logo {
+      margin-top: 10px; }
+    header.cloned form#busca {
+      margin-top: 14px; }
+  header form#busca {
+    float: right;
+    margin-top: 23px;
+    margin-left: 20px; }
+    header form#busca label {
+      position: relative;
+      background-color: #FFF; }
+      header form#busca label #busca {
+        color: #a3a3a3;
+        border: none;
+        outline: none;
+        padding: 8px 12px;
+        width: 108px; }
+      header form#busca label #goBusca {
+        position: absolute;
+        right: 10px;
+        top: 3px; }
+  header img.logo {
+    margin-top: 20px;
+    margin-right: 20px;
+    float: left; }
+  header nav.pri {
+    float: right;
+    line-height: 80px; }
+    header nav.pri ul li {
+      float: left;
+      list-style: none; }
+      header nav.pri ul li:hover {
+        background: #242424; }
+      header nav.pri ul li:hover .dropdown {
+        top: auto;
+        left: 0;
+        visibility: visible; }
+      header nav.pri ul li a {
+        font-size: 14px;
+        font-weight: 700;
+        color: #FFF;
+        letter-spacing: -0.5px;
+        display: block;
+        padding: 0 15px;
+        text-transform: uppercase;
+        outline: 0; }
+      header nav.pri ul li .drop {
+        margin-right: 10px;
+        padding-right: 20px;
+        background: url("../img/setinha-down.png") no-repeat right 35px; }
+      header nav.pri ul li .dropdown {
+        position: absolute;
+        left: 0;
+        display: block;
+        visibility: hidden;
+        width: 1320px;
+        text-align: left;
+        border-bottom: 2px solid #ed1c24;
+        background: #242424; }
+  header .sec {
+    margin: 0 -20px;
+    background-color: #242424;
+    display: block;
+    float: none;
+    clear: both;
+    font-weight: 700;
+    height: 28px; }
+    header .sec span {
+      background-color: #ed1c24;
+      color: #FFF;
+      background-image: url("../img/arrow-red.jpg");
+      background-position: right;
+      background-repeat: no-repeat;
+      display: inline-block;
+      padding: 0 40px 0 20px;
+      font-size: 13px;
+      line-height: 27px;
+      float: left; }
+      header .sec span i {
+        font-size: 16px; }
+    header .sec nav {
+      float: left;
+      margin-left: 20px;
+      line-height: 28px; }
+      header .sec nav li {
+        display: inline-block;
+        margin-right: 32px;
+        font-size: 13px; }
+        header .sec nav li a {
+          color: #FFF;
+          text-transform: uppercase; }
+        header .sec nav li:last-child {
+          margin-right: 0; }
+
+/*# sourceMappingURL=main.css.map */
