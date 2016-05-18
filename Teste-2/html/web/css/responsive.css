@@ -1,9 +1,20 @@
-@media only screen and (max-width: 1120px) {
+@media only screen and (max-width: 1138px) {
 	header { visibility: hidden !important; }
+	#nav-mobile,
 	#nav-trigger { display: block !important; }
+	.expanded { display: block !important; }
 }
+
+@media only screen and (max-width: 1248px) {
+		nav.social { display: none !important; }
+}
+
+.expanded { display: none; }
+
 #nav-trigger,
+#nav-mobile,
 #busca-mobile { display: none; }
+
 #nav-trigger {  position: relative; text-align: center; background-color: #ed1c24; line-height: 56px; }
 #nav-trigger:after { clear: float; }
 #nav-trigger img.logo {width: auto;  height: 32px; }
@@ -25,5 +36,9 @@ nav#nav-mobile a {	font-weight: 700; display: block;	padding: 20px 30px; color: 
 nav#nav-mobile a.drop { background: url("../img/setinha-down.png") no-repeat right 26px; margin-right: 20px; }
 
 #busca-mobile { background-color: #d41f1f; padding: 20px; }
-#busca-mobile #busca { width: 100%; padding: 10px 8px; border: none; border-radius: 6px;}
+#busca-mobile #busca { outline: none; width: 100%; padding: 10px 8px; border: none; border-radius: 6px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
 #busca-mobile #goBusca{ display: none; }

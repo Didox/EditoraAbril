@@ -40,38 +40,40 @@ $(function() {
 
     scrollIntervalID = setInterval(stickIt, 10);
 
-    function hideMenu(element) {
-        $('nav#nav-mobile ul.expanded').removeClass('expanded').slideUp(250);
+    var botaoMenu = '#nav-trigger span.menu';
+    var botaoBusca = '#nav-trigger span.lupa';
+
+    var menuContent = 'nav#nav-mobile ul';
+    var buscaContent = '#busca-mobile';
+
+    function hideItem(element, content) {
+        $(content + '.expanded').removeClass('expanded');
         $(element).removeClass("open");
     }
 
-    function hideBusca(element) {
-        $('#busca-mobile.expanded').removeClass('expanded').slideUp(250);
-        $(element).removeClass("open");
-    }
-
-    $('#nav-trigger span.menu').click(function() {
-        if ($('#busca-mobile').hasClass('expanded')) {
-            hideBusca('#nav-trigger span.lupa');
+    $(botaoMenu).click(function() {
+        if ($(buscaContent).hasClass('expanded')) {
+            hideItem(botaoBusca, buscaContent);
         }
-        if ($('nav#nav-mobile ul').hasClass('expanded')) {
-            hideMenu(this);
+
+        if ($(menuContent).hasClass('expanded')) {
+            hideItem(this, menuContent);
         } else {
-            $("nav#nav-mobile ul").addClass("expanded").slideDown(250);
-            $(this).addClass("open");
+            $(menuContent).addClass('expanded');
+            $(this).addClass('open');
         }
     });
 
-    $('#nav-trigger span.lupa').click(function() {
-        if ($('nav#nav-mobile ul').hasClass('expanded')) {
-            hideMenu('#nav-trigger span.menu');
+    $(botaoBusca).click(function() {
+        if ($(menuContent).hasClass('expanded')) {
+            hideItem(botaoMenu, menuContent);
         }
 
-        if ($('#busca-mobile').hasClass('expanded')) {
-            hideBusca(this);
+        if ($(buscaContent).hasClass('expanded')) {
+            hideItem(this, buscaContent);
         } else {
-            $("#busca-mobile").addClass("expanded").slideDown(250);
-            $(this).addClass("open");
+            $(buscaContent).addClass('expanded');
+            $(this).addClass('open');
         }
     });
 

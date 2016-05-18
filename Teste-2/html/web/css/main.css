@@ -46,7 +46,10 @@ header {
     line-height: 60px; }
     header .social ul li {
       list-style: none;
-      display: inline-block; }
+      display: inline-block;
+      margin-right: 10px; }
+      header .social ul li:last-child {
+        margin-right: 0; }
   header.cloned {
     height: 60px; }
     header.cloned .sec {
